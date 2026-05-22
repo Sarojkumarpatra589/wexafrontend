@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 
 export default function RegisterPage() {
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("employee");
 
   // =========================
   // PASSWORD VALIDATION RULES
@@ -67,6 +68,16 @@ export default function RegisterPage() {
             placeholder="Email"
             className="px-4 py-3 rounded-lg bg-black border border-red-900/40 focus:border-red-500 outline-none text-white placeholder-gray-500"
           />
+
+          {/* ROLE DROPDOWN */}
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            className="px-4 py-3 rounded-lg bg-black border border-red-900/40 focus:border-red-500 outline-none text-white"
+          >
+            <option value="employee">Employee</option>
+            <option value="hr">HR</option>
+          </select>
 
           {/* PASSWORD INPUT */}
           <input
