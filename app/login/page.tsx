@@ -1,35 +1,31 @@
+"use client";
+
+import { useState } from "react";
+
 export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-950 text-white">
+    <main style={{ padding: "40px" }}>
+      <h1>Login</h1>
 
-      <div className="bg-gray-900 p-8 rounded-2xl w-full max-w-md">
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        style={{ display: "block", margin: "10px 0" }}
+      />
 
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          Login
-        </h1>
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        style={{ display: "block", margin: "10px 0" }}
+      />
 
-        <div className="space-y-4">
-
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700"
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700"
-          />
-
-          <button className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-xl font-medium">
-            Login
-          </button>
-
-        </div>
-
-      </div>
-
+      <button>Login</button>
     </main>
   );
 }
