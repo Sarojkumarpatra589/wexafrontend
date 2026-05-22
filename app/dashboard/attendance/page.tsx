@@ -72,7 +72,6 @@ export default function AttendancePage() {
         />
 
         <div className="flex gap-3">
-
           <button className="px-4 py-2 text-sm rounded-lg border border-zinc-700 hover:border-zinc-500">
             Export CSV
           </button>
@@ -80,7 +79,6 @@ export default function AttendancePage() {
           <button className="px-4 py-2 text-sm rounded-lg bg-red-600 hover:bg-red-700 text-white">
             + Mark Attendance
           </button>
-
         </div>
 
       </div>
@@ -104,8 +102,8 @@ export default function AttendancePage() {
 
           <tbody className="divide-y divide-zinc-800">
 
-            {filtered.map((a, i) => (
-              <tr key={i} className="hover:bg-zinc-800/40 transition">
+            {filtered.map((a) => (
+              <tr key={a.id} className="hover:bg-zinc-800/40 transition">
 
                 <td className="p-4 text-gray-400">{a.id}</td>
                 <td className="p-4 text-white font-medium">{a.name}</td>
@@ -127,7 +125,7 @@ export default function AttendancePage() {
 
       </div>
 
-      {/* STYLE */}
+      {/* STYLES */}
       <style jsx>{`
         .glass-card {
           background: rgba(18, 18, 18, 0.65);
@@ -145,7 +143,9 @@ export default function AttendancePage() {
 /* ===================== */
 /* STATUS BADGE */
 /* ===================== */
-function StatusBadge({ status }: { status: string }) {
+function StatusBadge(props: { status: string }) {
+  const { status } = props;
+
   const base = "px-3 py-1 rounded-full text-xs border";
 
   if (status === "Present") {

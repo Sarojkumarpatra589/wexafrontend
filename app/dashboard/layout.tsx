@@ -106,7 +106,7 @@ export default function DashboardLayout({
       {/* ===================== */}
       {/* MAIN AREA */}
       {/* ===================== */}
-      <div className="flex-1 flex flex-col relative md:ml-72">
+      <div className="flex-1 flex flex-col relative md:ml-5">
 
         {/* TOP BAR */}
         <header className="flex items-center justify-between px-4 md:px-6 py-4 border-b border-red-900/30 bg-black/60 backdrop-blur-md sticky top-0 z-40">
