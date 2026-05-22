@@ -18,10 +18,6 @@ export default function DashboardLayout({
     ["Home", "/dashboard", "🏠"],
      ["HR", "/hr/", "👥"],
     ["Employees", "/employee", "👥"],
-    ["Attendance", "/dashboard/attendance", "📅"],
-    ["Leaves", "/dashboard/leaves", "📝"],
-    ["Payroll", "/dashboard/payroll", "💰"],
-    ["Tasks", "/dashboard/tasks", "⚡"],
   ];
 
   return (
